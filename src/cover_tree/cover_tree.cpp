@@ -675,6 +675,18 @@ bool CoverTree::check_covering() const
 
 /****************************** Internal Constructors of Cover Trees *************************************/
 
+// constructor: copy ctor
+CoverTree::CoverTree(const CoverTree& orig)
+    : root(orig.root)
+    , min_scale(orig.min_scale.load())
+    , max_scale(orig.max_scale.load())
+    , truncate_level(orig.truncate_level)
+    , id_valid(orig.id_valid)
+    , N(orig.N.load())
+    , D(orig.D)
+{
+}
+
 // constructor: NULL tree
 CoverTree::CoverTree(const int truncate /*=-1*/ )
     : root(NULL)

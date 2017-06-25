@@ -198,6 +198,8 @@ protected:
 public:
     /*** Internal Contructors ***/
     /*** Constructor: needs at least 1 point to make a valid cover-tree ***/
+    // copy ctor
+    CoverTree(const CoverTree& orig);
     // NULL tree
     explicit CoverTree(int truncate = -1);
     // cover tree with one point as root
