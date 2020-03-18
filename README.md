@@ -39,12 +39,14 @@ Under active development
 Just use `python setup.py install` and then in python you can `import nntree`. The python API details are provided in `API.pdf`.
  If you do not have root priveledges, install with `python setup.py install --user` and make sure to have the folder in path. 
 ## Organisation
-1. All codes are under `src` within respective folder
-2. Dependencies are provided under `lib` folder
-3. For running cover tree an example script is provided under `scripts`
-4. `data` is a placeholder folder where to put the data
-5. `build` and `dist` folder will be created to hold the executables
 
+- `src` All the native source-code, within respective folders
+- `covertree` python wrapper source code
+- `lib` Native dependencies
+- `data` contains script(s) to generate synthetic data
+- `windows` Visual Studio project files
+- `build` will be created to hold build artifacts
+- `dist` will be created to hold the executables
 
 ## Requirements
 1. gcc >= 5.0 or Intel&reg; C++ Compiler 2017 for using C++14 features
