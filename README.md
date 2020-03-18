@@ -36,8 +36,13 @@ Under active development
 ### New: Moving to Python3
 
 ### New: Python wrappers added
-Just use `python setup.py install` and then in python you can `import nntree`. The python API details are provided in `API.pdf`.
- If you do not have root priveledges, install with `python setup.py install --user` and make sure to have the folder in path. 
+
+Just use `python setup.py install` and then in python you can `import nntree`.
+The python API details are provided in `API.pdf`.
+If you do not have root priveledges,
+install with `python setup.py install --user`,
+and make sure to have the folder in path.
+
 ## Organisation
 
 - `src` All the native source-code, within respective folders
