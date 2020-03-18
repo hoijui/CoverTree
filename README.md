@@ -49,7 +49,12 @@ Just use `python setup.py install` and then in python you can `import nntree`. T
 - `dist` will be created to hold the executables
 
 ## Requirements
-1. gcc >= 5.0 or Intel&reg; C++ Compiler 2017 for using C++14 features
+
+One of these C++ compilers (supporting c++14 features):
+
+- gcc v5.0 or later
+- Intel&reg; C++ Compiler 2017 or later
+- LLVM/CLang v3.4 or later
 
 ## How to use
 We will show how to run our Cover Tree on a single machine using synthetic dataset
