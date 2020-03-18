@@ -109,8 +109,18 @@ clang libc++-dev
    ```
 
 ## Performance
-Based on our evaluation the implementation is easily scalable and efficient. For example on Amazon EC2 c4.8xlarge, we could insert more than 1 million vectors of 1000 dimensions in Euclidean space with L2 norm under 250 seconds. During query time we can process > 300 queries per second per core.
+
+Based on our evaluation,
+the implementation is easily scalable and efficient.
+For example on Amazon EC2 c4.8xlarge,
+we could insert more than 1 million vectors of 1000 dimensions in Euclidean space
+with L2 norm under 250 seconds.
+During query time,
+we can process > 300 queries per second per core.
 
 ## Troubleshooting
-If the build fails and throws error like "instruction not found", then most probably the system does not support AVX2 instruction sets. To solve this issue, in `setup.py` and `src/cover_tree/makefile` please change `march=core-avx2`to `march=corei7`.
 
+If the build fails and throws an error like "instruction not found",
+then most probably the system does not support the AVX2 instruction sets.
+To solve this issue,
+please change `march=core-avx2`to `march=corei7` in `setup.py` and `src/cover_tree/makefile`.
