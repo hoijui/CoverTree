@@ -26,7 +26,7 @@ we prune out solutions based on a subset of the dimensions that are being querie
 This is particularly useful when trying to find the nearest neighbor
 in highly clustered subset of the data,
 e.g. when the data comes from a recursive mixture of Gaussians
-or more generally time marginalized coalscent process.
+or more generally time marginalized coalescent process.
 The effect of these two optimizations is,
 that our data structure is extremely simple, highly parallelizable
 and is comparable in performance to existing NN implementations on many data-sets.
@@ -39,7 +39,7 @@ Under active development
 
 Just use `python setup.py install` and then in python you can `import nntree`.
 The python API details are provided in `API.pdf`.
-If you do not have root priveledges,
+If you do not have root privileges,
 install with `python setup.py install --user`,
 and make sure to have the folder in path.
 
