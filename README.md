@@ -57,62 +57,62 @@ One of these C++ compilers (supporting c++14 features):
 - LLVM/CLang v3.4 or later
 
 ## How to use
-We will show how to run our Cover Tree on a single machine using synthetic dataset
 
-1. First of all compile by hitting make
+We will show how to run our Cover Tree on a single machine using a synthetic dataset.
 
-   ```bash
-     make
-   ```
+1. Compile by hitting make
 
-2. Generate synthetic dataset
+- using GCC v5.0+:
 
    ```bash
-     python data/generateData.py
+make all
    ```
 
-
-3. Run Cover Tree
+- or using Intel&reg; C++ Compiler 2017+:
 
    ```bash
-      dist/cover_tree data/train_100d_1000k_1000.dat data/test_100d_1000k_10.dat
+make intel
    ```
 
-The make file has some useful features:
-
-- if you have Intel&reg; C++ Compiler, then you can instead
-
-   ```bash
-     make intel
-   ```
-
-- or if you want to use Intel&reg; C++ Compiler's cross-file optimization (ipo), then hit
+- or using Intel&reg; C++ Compiler 2017+ with cross-file optimization (ipo):
    
    ```bash
-     make inteltogether
+make inteltogether
    ```
 
-- Yet an other alternative is to use the LLVM/CLang compiler (minimal required version is 3.4, for c++14 support)
+- or using LLVM/CLang 3.4+:
 
    ```bash
-     make llvm
+make llvm
    ```
 
 For this to work under linux,
 you would probably have to install at least these packages
 (in version 3.4 or later):
-clang libc++-dev
+`clang libc++-dev`
 
-- Also you can selectively compile individual modules by specifying
+2. Generate synthetic dataset
 
    ```bash
-     make <module-name>
+python data/generateData.py
+   ```
+
+3. Run Cover Tree
+
+   ```bash
+dist/cover_tree data/train_100d_1000k_1000.dat data/test_100d_1000k_10.dat
+   ```
+
+- Also, you can selectively compile individual modules by specifying
+
+   ```bash
+make <module-name>
    ```
 
 - or clean individually by
 
    ```bash
-     make clean-<module-name>
+make clean-<module-name>
    ```
 
 ## Performance
